@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# CONFIGURACIONES POR DEFECTO DEL ENTORNO
 LOCALSTACK_PORT=4566
 SERVICE_URL=http://localhost:${LOCALSTACK_PORT}
 DEFAULT_REGION_NAME=us-east-1
@@ -8,6 +9,7 @@ DEFAULT_REGION_NAME=us-east-1
 FUNCTION_NAME=PythonLambdaFunction
 FUNCTION_ROLE_NAME=LambdaFunctionRole
 
+# Empaqueta en un archivo .zip el codigo que sera ejecutado por la function Lambda
 echo "Empaquetando archivo .zip para ser ejecutado por la funcion Lambda..."
 zip function.zip lambda_function.py
 
